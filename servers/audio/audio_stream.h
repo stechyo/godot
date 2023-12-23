@@ -109,6 +109,10 @@ public:
 
 	virtual int mix(AudioFrame *p_buffer, float p_rate_scale, int p_frames);
 
+	PackedVector2Array get_raw_audio(float p_rate_scale, int p_frames);
+	void start_playback(double p_from_pos = 0.0);
+	void stop_playback();
+
 	virtual void set_is_sample(bool p_is_sample) {}
 	virtual bool get_is_sample() const { return false; }
 	virtual Ref<AudioSamplePlayback> get_sample_playback() const;
